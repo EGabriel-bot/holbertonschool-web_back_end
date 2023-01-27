@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
 """ Task 0 """
-
 BaseCaching = __import__('base_caching').BaseCaching
 
 
 class BasicCache(BaseCaching):
     """ Caching System """
-
     def __init__(self) -> None:
         """ Constructor and init super """
         super().__init__()
