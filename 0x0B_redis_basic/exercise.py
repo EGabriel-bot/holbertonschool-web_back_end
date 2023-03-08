@@ -3,7 +3,7 @@
 
 import redis
 import uuid
-import datetime
+from typing import Union
 
 
 class Cache:
@@ -15,7 +15,7 @@ class Cache:
         self.__redis.flushdb()
         print(type(self))
 
-    def store(self, data: str) -> str:
+    def store(self, data: Union[str, bytes, int, float]) -> str:
         """ Store method """
         randomKey = str(uuid.uuid4())
         self.__redis.set(randomKey, data)
