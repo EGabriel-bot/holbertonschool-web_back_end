@@ -13,7 +13,6 @@ class Cache:
         """ Instance method """
         self._redis = redis.Redis()
         self._redis.flushdb()
-        print(type(self))
 
     def store(self, data: Union[str, bytes, int, float]) -> str:
         """ Store method """
