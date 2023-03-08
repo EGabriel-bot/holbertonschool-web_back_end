@@ -18,5 +18,5 @@ class Cache:
     def store(self, data: str) -> str:
         """ Store method """
         randomKey = str(uuid.uuid4())
-        key = self.__redis.set(randomKey, data)
+        self.__redis.set(randomKey, data)
         return randomKey
