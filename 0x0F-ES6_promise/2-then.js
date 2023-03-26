@@ -1,7 +1,7 @@
 export default function handleResponseFromAPI(promise) {
   promise.then(
     () => ({ status: 200, body: 'success' }),
-    (reject) => reject(new Error()),
+    () => (new Error({})),
   )
     .finally(() => console.log('Got a response from the api'));
 }
